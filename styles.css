@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f5f5f5;
+}
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+p {
+  font-family: "Lato", sans-serif;
+}
+.cta-button {
+  background-color: #f26722;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 1px #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  max-width: fit-content;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.cta-button:hover {
+  background-color: rgb(14, 199, 14);
+  transition: 0.5s;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  flex: 1;
+}
+.logo img {
+  width: 10rem;
+}
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+nav a {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: #f26722;
+  text-transform: uppercase;
+}
+nav a:hover {
+  color: gold;
+  transition: 0.5s;
+}
+.hero {
+  display: flex;
+  background-image: url(./assets/images/pele-de-vidro.webp);
+  background-size: cover;
+  background-position: 10% 40%;
+  background-repeat: no-repeat;
+  height: 75vh;
+  padding: 40px;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.hero-text h1 {
+  color: #f26722;
+  text-shadow: 1px 3px 1px black;
+  font-size: 60px;
+}
+.hero-text p {
+  color: #f5f5f5;
+  text-shadow: 1px 3px 1px black;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.hero-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+}
+.hero-list li {
+  background: #f26722cc;
+  padding: 5px;
+  border-radius: 10px;
+  color: #f5f5f5;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  align-items: center;
+  box-shadow: 1px 3px 1px black;
+}
