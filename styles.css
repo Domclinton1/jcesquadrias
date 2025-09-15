@@ -53,6 +53,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #f5f5f5;
+  padding: 10px;
 }
 .logo {
   flex: 1;
@@ -77,6 +84,80 @@ nav a:hover {
   color: gold;
   transition: 0.5s;
 }
+/* Menu Toggle (Hamburger) */
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.menuToggle span {
+  display: block;
+  height: 3px;
+  background-color: #f26722;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Mobile */
+/* Overlay */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 900;
+}
+
+#menuOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ajustes para nav no mobile */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 200px;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  nav.active {
+    right: 0;
+  }
+}
+
+.menuToggle {
+  display: flex;
+}
+
+/* Animação do hambúrguer */
+.menuToggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menuToggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menuToggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
 .hero {
   display: flex;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -88,6 +169,7 @@ nav a:hover {
   height: 75vh;
   padding: 40px;
   max-width: 100%;
+  margin-top: 130px;
 }
 
 .hero-text {
@@ -209,4 +291,41 @@ nav a:hover {
 .card-servico:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 1020px) {
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+  .hero-list {
+    flex-direction: column;
+  }
+  .hero-text {
+    padding: 0;
+  }
+  .hero {
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    max-width: 100%;
+    text-align: center;
+    line-height: 1;
+  }
+  .sobre {
+    padding: 8px;
+    margin-top: 20px;
+  }
+  .sobre-container {
+    flex-direction: column-reverse;
+  }
+  .sobre-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
