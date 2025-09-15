@@ -44,6 +44,11 @@ p {
   max-width: fit-content;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+  max-width: fit-content;
+  font-size: 100%;
+  align-items: center;
+  display: flex;
+  gap: 0.3rem;
 }
 .cta-button:hover {
   background-color: rgb(14, 199, 14);
@@ -60,6 +65,7 @@ header {
   z-index: 1000;
   background-color: #f5f5f5;
   padding: 10px;
+  transition: transform 0.3s ease-in-out; /* <- suaviza a transição */
 }
 .logo {
   flex: 1;
@@ -141,21 +147,20 @@ nav a:hover {
   nav.active {
     right: 0;
   }
-}
+  .menuToggle {
+    display: flex;
+  }
 
-.menuToggle {
-  display: flex;
-}
-
-/* Animação do hambúrguer */
-.menuToggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.menuToggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.menuToggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  /* Animação do hambúrguer */
+  .menuToggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menuToggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menuToggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
 }
 
 .hero {
@@ -233,6 +238,12 @@ nav a:hover {
   gap: 1.3rem;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    /* sombreado preto semitransparente */
+      url(./assets/images/pele-de-vidro.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 30% 35%;
 }
 .services p {
   color: #f5f5f5;
@@ -292,6 +303,140 @@ nav a:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+.fotos {
+  background-color: #000;
+  color: #f5f5f5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  max-width: 100%;
+}
+.fotos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1200px;
+}
+
+.destaque {
+  font-weight: bold;
+  color: #f26722;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  max-height: 70vh;
+  margin: 0 auto 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.carousel-track img {
+  width: 100%;
+  max-height: 70vh; /* altura proporcional à tela */
+  object-fit: contain;
+  border-radius: 15px;
+  background-color: #000;
+}
+
+.foto-card {
+  min-width: 100%;
+  position: relative;
+}
+
+.foto-card img {
+  width: 100%;
+  object-fit: cover; /* mantém proporção sem distorcer */
+  display: block;
+  border-radius: 15px;
+}
+
+/* Overlay Premium */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  border-radius: 0 0 15px 15px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(0, 0, 0, 0.2) 90%,
+    transparent
+  );
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f26722;
+}
+
+.overlay p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #f5f5f5;
+}
+
+/* Botões */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 2;
+}
+
+.prev:hover,
+.next:hover {
+  background: #f26722;
+}
+
+.prev {
+  left: 15px;
+}
+.next {
+  right: 15px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .carousel {
+    height: 450px;
+  }
+  .overlay h3 {
+    font-size: 1.1rem;
+  }
+  .overlay p {
+    font-size: 0.85rem;
+  }
+}
+
 @media screen and (max-width: 1020px) {
   .hero-text h1 {
     font-size: 2rem;
@@ -327,5 +472,16 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+  .card-servico {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .services-container .cta-button {
+    max-width: fit-content;
+    font-size: 100%;
+    align-items: center;
+    display: flex;
+    gap: 0.3rem;
   }
 }
