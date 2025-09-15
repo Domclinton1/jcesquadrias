@@ -69,3 +69,12 @@ setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   updateSlide(currentSlide);
 }, 5000);
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const question = item.querySelector(".faq-question");
+  question.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});

@@ -19,9 +19,9 @@
   </head>
   <body>
     <header>
-      <div class="logo">
+      <a class="logo" href="#">
         <img src="./assets/icons/logo.png" alt="Logomarca de JC Esquadrias" />
-      </div>
+      </a>
 
       <div class="menuToggle" id="menuToggle">
         <span></span>
@@ -33,6 +33,8 @@
         <a href="#sobre-nos">Sobre</a>
         <a href="#nossos-servicos">Serviços</a>
         <a href="#fotos-de-obras">Fotos</a>
+        <a href="#comentarios-de-clientes">Avaliações</a>
+        <a href="#faq">Perguntas Frequentes</a>
         <a href="#contato">Fale conosco</a>
       </nav>
     </header>
@@ -295,11 +297,175 @@
       </section>
 
       <!--Fim da sessão "fotos"-->
-      <section class="contato" id="contato"></section>
+      <section class="reviews" id="comentarios-de-clientes">
+        <h2>O que nossos clientes dizem</h2>
+        <p class="reviews-subtitle">
+          Mais de 34 anos de confiança em esquadrias de alumínio
+        </p>
+
+        <div class="reviews-container">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              “Excelente atendimento e qualidade impecável! Ficamos muito
+              satisfeitos com o resultado.”
+            </p>
+            <span class="review-author">— Maria Silva</span>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              “Profissionais competentes e entrega dentro do prazo. Recomendo de
+              olhos fechados.”
+            </p>
+            <span class="review-author">— João Pereira</span>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              “A empresa cuida de cada detalhe, meu projeto ficou incrível.
+              Valeu cada centavo!”
+            </p>
+            <span class="review-author">— Ana Costa</span>
+          </div>
+        </div>
+
+        <a
+          href="https://search.google.com/local/writereview?placeid=SEU_PLACE_ID_AQUI"
+          target="_blank"
+          class="reviews-cta"
+          >Deixe sua avaliação no Google</a
+        >
+      </section>
+      <!--Fim da sessão "reviews"-->
+      <section class="faq" id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+          <button class="faq-question">
+            Quanto tempo leva para fabricar e instalar as esquadrias?
+          </button>
+          <div class="faq-answer">
+            Normalmente de 5 a 15 dias após a aprovação do projeto.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Vocês atendem fora de Pará de Minas?
+          </button>
+          <div class="faq-answer">
+            Sim, atendemos em toda a região num raio de até 150 km.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            O alumínio realmente é mais vantajoso do que ferro ou madeira?
+          </button>
+          <div class="faq-answer">
+            Sim! O alumínio é mais resistente à ferrugem, exige pouca manutenção
+            e garante mais durabilidade e elegância.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Fazem projetos sob medida?</button>
+          <div class="faq-answer">
+            Sim, todos os projetos são 100% personalizados de acordo com sua
+            necessidade e espaço.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Como solicitar um orçamento?</button>
+          <div class="faq-answer">
+            Basta clicar no botão do WhatsApp e enviar sua ideia. Nossa equipe
+            responde rápido para agilizar seu projeto.
+          </div>
+        </div>
+        <a
+          href="https://wa.me/5537998187529?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento%20sobre%20um%20projeto..."
+          class="faq-cta"
+          >Ainda tem dúvidas? Fale conosco pelo WhatsApp</a
+        >
+      </section>
+
+      <section class="cta-final">
+        <div class="cta-container">
+          <h2>Transforme Seu Projeto em Realidade</h2>
+          <p>
+            Há <span class="destaque">34 anos</span> realizamos obras de
+            confiança em Pará de Minas e região. Não adie o seu sonho – solicite
+            agora um orçamento rápido e gratuito pelo WhatsApp.
+          </p>
+          <a
+            href="https://wa.me/5537998187529?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20sobre%20um%20projeto...%20Vim%20pelo%20site."
+            target="_blank"
+            class="cta-button-final"
+          >
+            Solicitar Orçamento Agora
+          </a>
+          <small>Atendimento em até 150 km de Pará de Minas</small>
+        </div>
+      </section>
+      <!--Fim da sessão "cta final"-->
+      <section class="contato" id="contato">
+        <div class="container">
+          <h2 class="titulo">Entre em Contato</h2>
+          <p class="subtitulo">
+            Estamos prontos para atender você em Pará de Minas e região.
+          </p>
+
+          <!-- Mapa -->
+          <div class="mapa-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.6505722334127!2d-44.570511599999996!3d-19.8547327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa73c9824a87731%3A0x51eafedf2eefd1d4!2sR.%20Francisco%20Pereira%20Sobrinho%2C%20240%20-%20Papa%20Jo%C3%A3o%20Paulo%20II%2C%20Par%C3%A1%20de%20Minas%20-%20MG%2C%2035661-057!5e0!3m2!1spt-BR!2sbr!4v1757961862195!5m2!1spt-BR!2sbr"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <!-- Botões de Contato -->
+          <div class="contato-botoes">
+            <a
+              href="https://wa.me/5537998187529?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento..."
+              target="_blank"
+              class="btn-contato whatsapp"
+            >
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+
+            <a
+              href="https://www.facebook.com/seuFacebook"
+              target="_blank"
+              class="btn-contato facebook"
+            >
+              <i class="bi bi-facebook"></i> Facebook
+            </a>
+
+            <a
+              href="https://www.instagram.com/jcesquadrias_ofc"
+              target="_blank"
+              class="btn-contato instagram"
+            >
+              <i class="bi bi-instagram"></i> Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
       <!--Fim da sessão "contato" -->
     </main>
 
-    <footer></footer>
+    <footer>
+      <h3>JC Esquadrias</h3>
+      <em>2025 - Todos os direitos reservados</em>
+      <p>CNPJ: 60.279.653/0001-83</p>
+      <p>Cel: (37) 99818-7529</p>
+      <p>Pará de Minas</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
