@@ -78,3 +78,26 @@ faqItems.forEach((item) => {
     item.classList.toggle("active");
   });
 });
+
+document
+  .getElementById("whatsappForm")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let nome = document.getElementById("nome").value;
+    let whatsapp = document.getElementById("whatsapp").value;
+    let endereco = document.getElementById("endereco").value;
+    let mensagem = document.getElementById("mensagem").value;
+
+    let numero = "5537998187529"; // número do WhatsApp (37) 99818-7529
+
+    let texto = `Olá, tenho interesse nos serviços da JC Esquadrias!
+%0A%0A*Nome:* ${nome}
+%0A*WhatsApp:* ${whatsapp}
+%0A*Endereço:* ${endereco}
+%0A*Mensagem:* ${mensagem}`;
+
+    let link = `https://wa.me/${numero}?text=${texto}`;
+
+    window.open(link, "_blank");
+  });
