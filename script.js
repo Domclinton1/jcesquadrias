@@ -101,3 +101,9 @@ document
 
     window.open(link, "_blank");
   });
+function wppOpen() {
+  var click = window.document.querySelectorAll("wpp");
+  window.open(
+    "https://wa.me/5537998187529?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento..."
+  );
+}
