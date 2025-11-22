@@ -51,6 +51,7 @@ p {
   display: flex;
   gap: 0.3rem;
   margin: 0 auto;
+  cursor: pointer;
 }
 .cta-button:hover {
   background-color: rgb(14, 199, 14);
