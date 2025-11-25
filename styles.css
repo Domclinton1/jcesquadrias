@@ -35,7 +35,7 @@ p {
   font-family: "Lato", sans-serif;
 }
 .cta-button {
-  background-color: #f26722;
+  background-color: #20b858;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 1px 3px 1px #000;
@@ -54,9 +54,14 @@ p {
   cursor: pointer;
 }
 .cta-button:hover {
-  background-color: rgb(14, 199, 14);
+  background-color: #f26722;
   transition: 0.5s;
 }
+textarea {
+  resize: none;
+  height: 120px;
+}
+
 header {
   display: flex;
   align-items: center;

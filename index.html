@@ -80,6 +80,23 @@
       src="https://www.googletagmanager.com/gtag/js?id=AW-17674336655"
     ></script>
     <script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof url !== "undefined") {
+      window.open(url, "_blank");
+    }
+  };
+  gtag("event", "conversion", {
+    send_to: "AW-17674336655/nBulCPiZvcQbEI_z4-tB",
+    value: 1.0,
+    currency: "BRL",
+    event_callback: callback,
+  });
+  return false;
+}
+</script>
+
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -194,8 +211,8 @@ src="https://www.facebook.com/tr?id=2057299911753774&ev=PageView&noscript=1"
           <a
            target="_blank"
             class="cta-button"
-            
-            onclick="wppOpen(); return gtag_report_conversion( )"
+            rel="noopener noreferrer"
+            onclick="dispararCTA()"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -256,11 +273,9 @@ src="https://www.facebook.com/tr?id=2057299911753774&ev=PageView&noscript=1"
         </div>
         <a
           target="_blank"
-          class="cta-button"
-          data-aos="flip-left"
-          data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000"
-          onclick="wppOpen(); return gtag_report_conversion( )"
+            class="cta-button"
+            rel="noopener noreferrer"
+            onclick="dispararCTA()"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -363,10 +378,8 @@ src="https://www.facebook.com/tr?id=2057299911753774&ev=PageView&noscript=1"
           <a
             target="_blank"
             class="cta-button"
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-            onclick="wppOpen(); return gtag_report_conversion( )"
+            rel="noopener noreferrer"
+            onclick="dispararCTA()"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -602,10 +615,8 @@ src="https://www.facebook.com/tr?id=2057299911753774&ev=PageView&noscript=1"
            
             target="_blank"
             class="cta-button"
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-            onclick="wppOpen(); return gtag_report_conversion( )"
+            rel="noopener noreferrer"
+            onclick="dispararCTA()"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -664,6 +675,8 @@ src="https://www.facebook.com/tr?id=2057299911753774&ev=PageView&noscript=1"
           href="https://g.page/r/CT-D2N7OEigmEAI/review"
           target="_blank"
           class="cta-button"
+            rel="noopener noreferrer"
+           
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -728,8 +741,10 @@ src="https://www.facebook.com/tr?id=2057299911753774&ev=PageView&noscript=1"
         </div>
         <a
           
-          class="cta-button"
-          onclick="wppOpen(); return gtag_report_conversion( )"
+          target="_blank"
+            class="cta-button"
+            rel="noopener noreferrer"
+            onclick="dispararCTA()"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -760,11 +775,9 @@ src="https://www.facebook.com/tr?id=2057299911753774&ev=PageView&noscript=1"
           <a
           
             target="_blank"
-            class="cta-button-final"
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-            onclick="wppOpen(); return gtag_report_conversion( )"
+            class="cta-button"
+            rel="noopener noreferrer"
+            onclick="dispararCTA()"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -815,14 +828,7 @@ src="https://www.facebook.com/tr?id=2057299911753774&ev=PageView&noscript=1"
                 placeholder="Digite seu nome..."
                 required
               />
-
-              <label>WhatsApp:</label>
-              <input
-                type="text"
-                id="whatsapp"
-                placeholder="(xx) xxxxx-xxxx"
-                required
-              />
+            
 
               <label>Endereço:</label>
               <input
@@ -839,7 +845,9 @@ src="https://www.facebook.com/tr?id=2057299911753774&ev=PageView&noscript=1"
                 required
               ></textarea>
 
-              <button type="submit" onclick="return gtag_report_conversion( )">Enviar para o WhatsApp</button>
+              <button type="submit" 
+           
+   >Enviar para o WhatsApp</button>
             </form>
           </div>
 

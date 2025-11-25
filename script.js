@@ -85,25 +85,42 @@ document
     e.preventDefault();
 
     let nome = document.getElementById("nome").value;
-    let whatsapp = document.getElementById("whatsapp").value;
     let endereco = document.getElementById("endereco").value;
     let mensagem = document.getElementById("mensagem").value;
 
-    let numero = "5537998187529"; // número do WhatsApp (37) 99818-7529
+    let numero = "5537998187529";
 
     let texto = `Olá, tenho interesse nos serviços da JC Esquadrias!
 %0A%0A*Nome:* ${nome}
-%0A*WhatsApp:* ${whatsapp}
 %0A*Endereço:* ${endereco}
 %0A*Mensagem:* ${mensagem}`;
 
     let link = `https://wa.me/${numero}?text=${texto}`;
 
-    window.open(link, "_blank");
+    // Pixel Facebook
+    if (typeof fbq !== "undefined") {
+      fbq("track", "Contact");
+    }
+
+    // Google Ads com callback correto
+    gtag_report_conversion(link);
   });
+
+function dispararCTA() {
+  // Abrir WhatsApp
+  const urlWpp = wppOpen();
+
+  // Enviar evento para o Facebook
+  fbq("track", "Contact");
+
+  // Converter Google Ads corretamente
+  gtag_report_conversion(urlWpp);
+}
+
 function wppOpen() {
   var click = window.document.querySelectorAll("wpp");
   window.open(
     "https://wa.me/5537998187529?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento..."
   );
+  return url;
 }
