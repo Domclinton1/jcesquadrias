@@ -52,6 +52,7 @@ p {
   gap: 0.3rem;
   margin: 0 auto;
   cursor: pointer;
+  z-index: 999;
 }
 .cta-button:hover {
   background-color: #f26722;
@@ -821,6 +822,11 @@ footer {
     max-width: 100%;
     text-align: center;
     line-height: 1;
+  }
+  .sobre-img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
   .sobre {
     padding: 8px;
