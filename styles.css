@@ -73,7 +73,7 @@ header {
   left: 0;
   z-index: 1000;
   background-color: #f5f5f5;
-  padding: 10px;
+  padding: 5px 100px;
   transition: transform 0.3s ease-in-out; /* <- suaviza a transição */
 }
 
@@ -81,7 +81,7 @@ header {
   width: 10rem;
 }
 nav {
-  flex: 1;
+  gap: 2rem;
   display: flex;
   justify-content: space-around;
 }
@@ -183,6 +183,12 @@ nav a:hover {
   max-width: 100%;
   margin-top: 130px;
 }
+.hero-container {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  gap: 2rem;
+}
 
 .hero-text {
   display: flex;
@@ -229,7 +235,6 @@ nav a:hover {
   .hero-text {
     text-align: center;
   }
-  .
 }
 
 .sobre {
@@ -814,6 +819,10 @@ footer {
     flex-direction: column;
     gap: 1rem;
     padding: 15px;
+  }
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
   }
   .hero-text .cta-button {
     display: none;
