@@ -31,6 +31,127 @@ h3 {
   font-family: "Poppins", sans-serif;
   line-height: 1;
 }
+.metal-text {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 64px;
+  letter-spacing: 2px;
+
+  /* Cor base metálica */
+  background: linear-gradient(
+    180deg,
+    #f5f5f5 0%,
+    #cfcfcf 15%,
+    #9e9e9e 30%,
+    #e0e0e0 45%,
+    #7d7d7d 60%,
+    #bdbdbd 75%,
+    #f0f0f0 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Profundidade */
+  text-shadow:
+    0 1px 0 #ffffff33,
+    0 2px 2px #00000055,
+    0 4px 6px #00000066,
+    0 6px 10px #00000077;
+}
+.metal-text-3d {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #d9d9d9 20%,
+    #8a8a8a 45%,
+    #e6e6e6 60%,
+    #6e6e6e 75%,
+    #cfcfcf 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    1px 1px 0 #5f5f5f,
+    2px 2px 0 #4a4a4a,
+    3px 3px 0 #3a3a3a,
+    4px 4px 6px rgba(0, 0, 0, 0.7),
+    6px 6px 12px rgba(0, 0, 0, 0.8);
+}
+.metal-orange {
+  background: linear-gradient(
+    180deg,
+    #ffcc80 0%,
+    #ff9800 30%,
+    #ef6c00 55%,
+    #ffa726 75%,
+    #ffcc80 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 2px 2px #00000055,
+    0 4px 6px #00000077;
+}
+.metal-grafite {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    180deg,
+    #5f5f5f 0%,
+    #3f3f3f 18%,
+    #7a7a7a 35%,
+    #2f2f2f 52%,
+    #6a6a6a 68%,
+    #1f1f1f 85%,
+    #4a4a4a 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    1px 1px 0 #1a1a1a,
+    2px 2px 0 #141414,
+    3px 3px 2px rgba(0, 0, 0, 0.6),
+    5px 5px 8px rgba(0, 0, 0, 0.8);
+}
+.titulo-metalico {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    180deg,
+    #4b4b4b 0%,
+    #2a2a2a 20%,
+    #6a6a6a 40%,
+    #1c1c1c 55%,
+    #5a5a5a 70%,
+    #121212 85%,
+    #3f3f3f 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    1px 1px 0 #000000,
+    2px 2px 2px rgba(0, 0, 0, 0.6),
+    4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
 p {
   font-family: "Lato", sans-serif;
 }
@@ -90,11 +211,11 @@ nav a {
   font-weight: bold;
   font-size: 20px;
   text-decoration: none;
-  color: #f26722;
+  color: #4a4a4a;
   text-transform: uppercase;
 }
 nav a:hover {
-  color: gold;
+  color: #ef6c00;
   transition: 0.5s;
 }
 /* Menu Toggle (Hamburger) */
@@ -244,6 +365,30 @@ nav a:hover {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+}
+.sobre h2,
+.reviews h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #d9d9d9 20%,
+    #8a8a8a 45%,
+    #e6e6e6 60%,
+    #6e6e6e 75%,
+    #cfcfcf 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    1px 1px 0 #5f5f5f,
+    2px 2px 0 #4a4a4a,
+    3px 3px 0 #3a3a3a;
 }
 .sobre-container {
   display: flex;
