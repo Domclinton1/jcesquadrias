@@ -21,16 +21,9 @@ h2 {
 }
 h2 {
   color: #f26722;
-  text-shadow: 1px 3px 1px black;
-  font-size: 38px;
+  font-size: 2rem;
 }
-h3 {
-  color: #f26722;
-  text-shadow: 1px 3px 1px black;
-  font-size: 25px;
-  font-family: "Poppins", sans-serif;
-  line-height: 1;
-}
+
 .metal-text {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 800;
@@ -151,6 +144,73 @@ h3 {
     2px 2px 2px rgba(0, 0, 0, 0.6),
     4px 4px 8px rgba(0, 0, 0, 0.8);
 }
+.logo-metalico-2 {
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+
+  background: linear-gradient(
+    120deg,
+    #ffc04d 0%,
+    #ff9500 20%,
+    #ff7a00 40%,
+    #e65100 60%,
+    #ff9500 80%,
+    #ffc04d 100%
+  );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: brilhoMetal 2.5s linear infinite;
+}
+.logo-metalico {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+
+  background: linear-gradient(
+    120deg,
+    #ffc04d 0%,
+    #ff9500 20%,
+    #ff7a00 40%,
+    #e65100 60%,
+    #ff9500 80%,
+    #ffc04d 100%
+  );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: brilhoMetal 2.5s linear infinite;
+}
+
+@keyframes brilhoMetal {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 250% center;
+  }
+}
+.logo-metalico::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.4),
+    transparent 60%
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
 
 p {
   font-family: "Lato", sans-serif;
@@ -176,7 +236,7 @@ p {
   z-index: 999;
 }
 .cta-button:hover {
-  background-color: #f26722;
+  transform: scale(1.05);
   transition: 0.5s;
 }
 textarea {
@@ -187,14 +247,14 @@ textarea {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: #f5f5f5;
-  padding: 5px 100px;
+  background-color: #0d0d0d;
+  padding: 5px 10px;
   transition: transform 0.3s ease-in-out; /* <- suaviza a transição */
 }
 
@@ -264,7 +324,7 @@ nav a:hover {
     right: -100%;
     height: 100vh;
     width: 200px;
-    background-color: #f5f5f5;
+    background-color: #0d0d0d;
     flex-direction: column;
     transition: right 0.3s ease-in-out;
     z-index: 1000;
@@ -313,6 +373,7 @@ nav a:hover {
 }
 
 .hero-text {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -320,8 +381,6 @@ nav a:hover {
   justify-content: space-around;
 }
 .hero-text h1 {
-  color: #f26722;
-  text-shadow: 1px 2px 1px #f5f5f5;
   font-size: 60px;
   line-height: 1;
 }
@@ -371,24 +430,6 @@ nav a:hover {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 900;
   font-size: 2rem;
-
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #d9d9d9 20%,
-    #8a8a8a 45%,
-    #e6e6e6 60%,
-    #6e6e6e 75%,
-    #cfcfcf 100%
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  text-shadow:
-    1px 1px 0 #5f5f5f,
-    2px 2px 0 #4a4a4a,
-    3px 3px 0 #3a3a3a;
 }
 .sobre-container {
   display: flex;
@@ -454,7 +495,7 @@ nav a:hover {
 
 /* Card de serviço */
 .card-servico {
-  background-color: #fff;
+  background-color: #0d0d0d;
 
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -484,7 +525,7 @@ nav a:hover {
 }
 .card-servico p {
   font-size: 0.95rem;
-  color: #555;
+  color: #ffffff;
 }
 
 .card-servico:hover {
@@ -807,24 +848,23 @@ nav a:hover {
   color: #fff700;
 }
 
-.cta-button-final {
-  display: inline-block;
-  background: #f26722;
-  color: #fff;
-  font-size: 1.3rem;
+.cta-button {
+  border: none;
+  border-radius: 10px;
   font-weight: bold;
-  padding: 15px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, #ffc04d, #ff9500, #ff7a00, #e65100);
 
-.cta-button-final:hover {
-  background: #20b858;
-  transform: scale(1.05);
-}
+  color: white;
 
+  box-shadow:
+    0 4px 0 #a63600,
+    0 8px 20px rgba(0, 0, 0, 0.4);
+
+  transition: 0.3s ease;
+}
 .cta-final small {
   display: block;
   margin-top: 20px;
@@ -885,36 +925,95 @@ nav a:hover {
   text-align: left;
   font-family: "Poppins", sans-serif;
 }
+.hero-list li {
+  box-shadow:
+    inset 0 4px 8px rgba(255, 255, 255, 0.4),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.3),
+    0 15px 30px rgba(0, 0, 0, 0.35);
+
+  position: relative;
+  overflow: hidden;
+}
 #whatsappForm {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   max-width: 400px;
   width: 100%;
-  background-color: #f26722;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 16px;
+
+  background: linear-gradient(145deg, #ffc04d, #ff9500, #ff7a00, #e65100);
+
+  box-shadow:
+    inset 0 4px 8px rgba(255, 255, 255, 0.4),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.3),
+    0 15px 30px rgba(0, 0, 0, 0.35);
+
+  position: relative;
+  overflow: hidden;
 }
+#whatsappForm::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.35),
+    transparent 60%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
 #whatsappForm h3 {
   color: #f5f5f5;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-align: center;
 }
 #whatsappForm input,
 #whatsappForm textarea {
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: none;
+  outline: none;
+  font-size: 15px;
+
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
 }
+
 #whatsappForm label {
   color: #fff;
 }
+
 #whatsappForm button {
-  padding: 12px;
-  background-color: #25d366;
-  color: white;
+  padding: 14px;
   border: none;
+  border-radius: 10px;
+  font-weight: bold;
   font-size: 16px;
-  border-radius: 8px;
   cursor: pointer;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, #ffc04d, #ff9500, #ff7a00, #e65100);
+
+  color: white;
+
+  box-shadow:
+    0 4px 0 #a63600,
+    0 8px 20px rgba(0, 0, 0, 0.4);
+
+  transition: 0.3s ease;
+}
+
+#whatsappForm button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 0 #a63600,
+    0 12px 25px rgba(0, 0, 0, 0.5);
 }
 
 .contato-botoes {
@@ -969,13 +1068,15 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #0d0d0d;
+  color: #fff;
 }
 
 @media screen and (max-width: 1020px) {
   header {
     align-items: center;
+    justify-content: space-between;
   }
   header .logo img {
     max-width: 100px;
@@ -1018,10 +1119,16 @@ footer {
     text-align: center;
     line-height: 1;
   }
+  h2 .logo-metalico {
+    font-size: 1.3rem;
+  }
   .sobre-img {
     justify-content: center;
     align-items: center;
     display: flex;
+  }
+  .sobre-img img {
+    width: 100%;
   }
   .sobre {
     padding: 8px;
@@ -1036,8 +1143,11 @@ footer {
     text-align: center;
   }
   .card-servico {
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
+  }
+  .card-servico img {
+    width: 100%;
   }
   .services-container {
     padding: 10px;
